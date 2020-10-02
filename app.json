@@ -1,7 +1,0 @@
-{
-  "name": "Brogrammer Bot",
-  "description": "A Discord Bot for ESPN Fantasy Football",
-  "image": "heroku/python",
-  "repository": "https://github.com/blambert1080/BrogrammerBot.git",
-  "keywords": ["python"]
-}
