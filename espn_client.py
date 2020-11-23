@@ -9,7 +9,7 @@ def parse_local_draft_file():
   draft_dict = {}
   for line in draft_file:
     player, team = line.strip().rsplit(',')
-    draft_dict[player.strip()] = team.strip()
+    draft_dict[player.strip().lower()] = team.strip()
 
   draft_file.close()
   return draft_dict
@@ -27,7 +27,7 @@ def get_local_draft_info(player):
     draft_position = list(__local_draft).index(player) + 1
     draft_round = 1 if (draft_position < 11) else (math.trunc(draft_position / 10) + 1)
     return {
-      "player": player,
+      "player": player.title(),
       "round": draft_round,
       "position": draft_position
     }

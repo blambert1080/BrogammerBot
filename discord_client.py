@@ -17,7 +17,7 @@ async def on_message(message):
       await message.channel.send(war_blake_gif)
     if 'draft' in message.content.lower():
       player_name = message.content.replace('!bro draft ', '')
-      player_info = espn_client.get_local_draft_info(player_name.capitalize())
+      player_info = espn_client.get_local_draft_info(player_name.lower())
       if player_info is "Undrafted":
         await message.channel.send("This player was not found in the draft meaning that they were Undrafted or you spelled their name wrong.")
         return
