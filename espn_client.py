@@ -25,7 +25,7 @@ def get_online_draft():
 def get_local_draft_info(player):
   if player in __local_draft:
     draft_position = list(__local_draft).index(player) + 1
-    draft_round = 1 if (draft_position < 11) else (math.trunc(draft_position / 10) + 1)
+    draft_round = 1 if (draft_position < 11) else (math.trunc(draft_position / 11) + 1)
     return {
       "player": player.title(),
       "round": draft_round,
